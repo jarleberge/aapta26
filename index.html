@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekend 2026 – Åpta Camping</title>
+<meta name="description" content="Program for weekend 18.–20. september 2026 på Åpta Camping.">
+<meta name="theme-color" content="#0f2a2e">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛺</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#program">Hopp til programmet</a>
+
+<header class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__stars"></div>
+    <svg class="hero__hills" viewBox="0 0 1440 220" preserveAspectRatio="none" focusable="false">
+      <path class="hill hill--far"  d="M0,150 L180,80 L340,140 L520,60 L700,140 L880,90 L1060,150 L1240,100 L1440,160 L1440,220 L0,220 Z"/>
+      <path class="hill hill--near" d="M0,190 L160,140 L320,185 L500,130 L660,180 L840,140 L1020,185 L1200,145 L1440,195 L1440,220 L0,220 Z"/>
+    </svg>
+  </div>
+
+  <div class="hero__inner">
+    <p class="eyebrow">18.–20. september 2026 · Åpta Camping</p>
+    <h1 class="hero__title">Weekend<span class="hero__year">’26</span></h1>
+    <p class="hero__tagline">Tre dager med fellesskap, møter, seminarer og god mat ved sjøen.</p>
+
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="countdown__unit"><span class="countdown__num" data-cd="days">–</span><span class="countdown__label">dager</span></div>
+      <div class="countdown__unit"><span class="countdown__num" data-cd="hours">–</span><span class="countdown__label">timer</span></div>
+      <div class="countdown__unit"><span class="countdown__num" data-cd="minutes">–</span><span class="countdown__label">min</span></div>
+      <div class="countdown__unit"><span class="countdown__num" data-cd="seconds">–</span><span class="countdown__label">sek</span></div>
+    </div>
+    <p class="countdown__msg" id="countdownMsg"></p>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#program">Se programmet</a>
+      <button class="btn btn--ghost" id="nowBtn" type="button">Hva skjer nå?</button>
+    </div>
+  </div>
+
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Bytt mellom lyst og mørkt tema">
+    <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+  </button>
+</header>
+
+<main id="program" class="wrap">
+
+  <section class="panel" aria-label="Status og filter">
+    <div class="status" id="statusCard">
+      <span class="status__dot" aria-hidden="true"></span>
+      <div class="status__text">
+        <strong id="statusTitle">Laster program …</strong>
+        <span id="statusSub"></span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="tabs" role="tablist" aria-label="Velg dag" id="dayTabs"></div>
+      <div class="filters" id="typeFilters" role="group" aria-label="Filtrer på type"></div>
+    </div>
+  </section>
+
+  <div id="days"></div>
+
+  <section class="info">
+    <article class="info__card">
+      <h2>Praktisk</h2>
+      <ul>
+        <li>Innsjekk fredag kl. 17:00–18:30.</li>
+        <li>Ro i leiren kl. 23:00 fredag og lørdag.</li>
+        <li>Ta med sengetøy, varme klær, regntøy og godt humør.</li>
+      </ul>
+    </article>
+    <article class="info__card">
+      <h2>Måltider</h2>
+      <ul>
+        <li>Fredag: kveldsmat 19:00, kaffe og kaker 22:00.</li>
+        <li>Lørdag: frokost 09:00, lunsj 13:00, middag 17:30.</li>
+        <li>Søndag: frokost 09:00, middag 13:00.</li>
+      </ul>
+    </article>
+    <article class="info__card">
+      <h2>Hjemreise</h2>
+      <ul>
+        <li>Søndag etter middagen kl. 13:00.</li>
+        <li>Rydd hytta/teltplassen før avreise.</li>
+        <li>Husk å sjekke at ingenting blir igjen i fellesrommene.</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Weekend 18.–20. september 2026 · Åpta Camping</p>
+  <p class="footer__small">Med forbehold om endringer i programmet.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
