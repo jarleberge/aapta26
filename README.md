@@ -41,7 +41,29 @@ All programinformasjon ligger i `data.js`. Hver dag har `weekday`, `date` (ISO),
 `end` og `note` er valgfrie. Når `end` mangler, regnes posten som pågående fram til
 neste post samme dag. `type` må være en av nøklene i `EVENT_TYPES`.
 
+## Bygg
+
+```bash
+node build.js
+```
+
+Lager `dist/index.html` – hele siden i én fil med CSS og JS inlinet. Praktisk for
+opplasting til en statisk host, eller for å åpne programmet offline.
+
 ## Publisering
 
-Siden er statisk og kan legges rett ut på GitHub Pages:
-**Settings → Pages → Build and deployment → Deploy from a branch**, og velg branchen og mappen `/ (root)`.
+**Cloudflare Pages (CLI):**
+
+```bash
+node build.js
+npx wrangler pages deploy dist --project-name aapta26
+```
+
+`wrangler.toml` peker allerede på `dist`. Første gang må du kjøre `npx wrangler login`,
+eller sette `CLOUDFLARE_API_TOKEN` og `CLOUDFLARE_ACCOUNT_ID`.
+
+**Cloudflare Pages (uten CLI):** Workers & Pages → Create → Pages → Upload assets,
+og dra inn `dist`-mappa. Gir adressen `https://<prosjekt>.pages.dev`.
+
+**GitHub Pages:** Settings → Pages → Build and deployment → Deploy from a branch,
+og velg branchen og mappen `/ (root)`.

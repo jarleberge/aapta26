@@ -1,4 +1,4 @@
-/* Bygger en selvstendig HTML-fil (dist/weekend26.html) med CSS og JS inlinet.
+/* Bygger en selvstendig HTML-fil (dist/index.html) med CSS og JS inlinet.
    Kjør: node build.js   */
 const fs = require('fs');
 const path = require('path');
@@ -18,5 +18,5 @@ html = html.replace(
 );
 
 fs.mkdirSync(path.join(__dirname, 'dist'), { recursive: true });
-fs.writeFileSync(path.join(__dirname, 'dist', 'weekend26.html'), html);
-console.log('dist/weekend26.html skrevet (' + Math.round(html.length / 1024) + ' kB)');
+fs.writeFileSync(path.join(__dirname, 'dist', 'index.html'), html);
+console.log('dist/index.html skrevet (' + Math.round(html.length / 1024) + ' kB)');
